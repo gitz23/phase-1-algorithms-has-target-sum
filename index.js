@@ -1,13 +1,32 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+  let start = 0;
+  let end = array.length;
+  let mid = Math.floor((start + end) / 2);
+
+  while(start <= end)
+
+    if (array[mid] === target) return target;
+
+    if (array[mid] < target) {
+      start = mid + 1;
+    } else {
+      end = mid - 1;
+    }
+  }
+
+
 
 /* 
   Write the Big O time complexity of your function here
+  O(log n) -> binay search 
 */
 
 /* 
   Add your pseudocode here
+  create a function with array and target as parameters
+  iterate through the array to find two values that sum to the target 
+  return 
 */
 
 /*
