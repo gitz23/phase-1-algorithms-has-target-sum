@@ -1,19 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-  let start = 0;
-  let end = array.length;
-  let mid = Math.floor((start + end) / 2);
-
-  while(start <= end)
-
-    if (array[mid] === target) return target;
-
-    if (array[mid] < target) {
-      start = mid + 1;
-    } else {
-      end = mid - 1;
+  for (let i = 0; i < array.length; i++) {
+    const complement = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === complement) 
+      return true;
     }
   }
+  return false;
+}
+  
 
 
 
